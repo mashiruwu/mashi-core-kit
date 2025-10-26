@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B934C912EADB25300CAA3E7 /* MashiCoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B934C902EADB25300CAA3E7 /* MashiCoreKit */; };
+		8B934CBB2EAEE49600CAA3E7 /* MashiCoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B934CBA2EAEE49600CAA3E7 /* MashiCoreKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B934C912EADB25300CAA3E7 /* MashiCoreKit in Frameworks */,
+				8B934CBB2EAEE49600CAA3E7 /* MashiCoreKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				8B934C902EADB25300CAA3E7 /* MashiCoreKit */,
+				8B934CBA2EAEE49600CAA3E7 /* MashiCoreKit */,
 			);
 			productName = Example;
 			productReference = 8B98AA692EADA9B900DBA093 /* Example.app */;
@@ -202,7 +202,7 @@
 			mainGroup = 8B98AA602EADA9B900DBA093;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8B934C8F2EADB25300CAA3E7 /* XCLocalSwiftPackageReference "../MashiCoreKit" */,
+				8B934CB92EAEE49600CAA3E7 /* XCLocalSwiftPackageReference "../../mashi-core-kit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8B98AA6A2EADA9B900DBA093 /* Products */;
@@ -593,14 +593,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		8B934C8F2EADB25300CAA3E7 /* XCLocalSwiftPackageReference "../MashiCoreKit" */ = {
+		8B934CB92EAEE49600CAA3E7 /* XCLocalSwiftPackageReference "../../mashi-core-kit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../MashiCoreKit;
+			relativePath = "../../mashi-core-kit";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8B934C902EADB25300CAA3E7 /* MashiCoreKit */ = {
+		8B934CBA2EAEE49600CAA3E7 /* MashiCoreKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MashiCoreKit;
 		};
