@@ -7,7 +7,7 @@ let package = Package(
     name: "MashiCoreKit",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v18),
+        .iOS(.v16),
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
