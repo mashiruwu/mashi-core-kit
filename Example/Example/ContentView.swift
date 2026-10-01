@@ -9,17 +9,17 @@ import SwiftUI
 import MashiCoreKit
 
 struct ContentView: View {
-    var body: some View {
-      SplashView(
-          logoSplashImageName: "logo",
-          logoTitleImageName: "memora",
-          subtitle1: "Powered by AI.",
-          subtitle2: "Designed for your brain.",
-          backgroundImageName: "bg"
-      )
-    }
+	var body: some View {
+	SplashView(
+		logoSplashImageName: "logo",
+		logoTitleImageName: "memora",
+		subtitle1: "Powered by AI.",
+		subtitle2: "Designed for your brain.",
+		backgroundImageName: "bg"
+	)
+	}
 }
 
 #Preview {
-    ContentView()
+	ContentView()
 }

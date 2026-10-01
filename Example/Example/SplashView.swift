@@ -9,13 +9,13 @@ import SwiftUI
 import MashiCoreKit
 
 struct RootDemoScreen: View {
-    var body: some View {
-      SplashView(
-          logoSplashImageName: "logo",
-          logoTitleImageName: "memora",
-          subtitle1: "Powered by AI.",
-          subtitle2: "Designed for your brain.",
-          backgroundImageName: "bg"
-      )
-    }
+	var body: some View {
+	SplashView(
+		logoSplashImageName: "logo",
+		logoTitleImageName: "memora",
+		subtitle1: "Powered by AI.",
+		subtitle2: "Designed for your brain.",
+		backgroundImageName: "bg"
+	)
+	}
 }

@@ -1,36 +1,50 @@
 // swift-tools-version: 6.2
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "MashiCoreKit",
-    defaultLocalization: "en",
-    platforms: [
-        .iOS(.v16),
-    ],
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "MashiCoreKit",
-            targets: ["MashiCoreKit"]
-        ),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "MashiCoreKit",
-            resources: [
-              .process("Resources2")
-            ],
-            swiftSettings: [
-              .enableExperimentalFeature("StrictConcurrency")
-            ]
-        ),
-        .testTarget(
-            name: "MashiCoreKitTests",
-            dependencies: ["MashiCoreKit"]
-        ),
-    ]
+	name: "MashiCoreKit",
+	defaultLocalization: "en",
+	platforms: [
+		.iOS(.v16),
+		.macOS(.v13),
+	],
+	products: [
+		.library(name: "MashiCoreKit", targets: ["MashiCoreKit"]),
+		.library(name: "AIKit", targets: ["AIKit"]),
+		.library(name: "AuthKit", targets: ["AuthKit"]),
+		.library(name: "DatabaseKit", targets: ["DatabaseKit"]),
+		.library(name: "GamificationKit", targets: ["GamificationKit"]),
+		.library(name: "OnboardingKit", targets: ["OnboardingKit"]),
+		.library(name: "StorageKit", targets: ["StorageKit"]),
+		.library(name: "SubscriptionsKit", targets: ["SubscriptionsKit"]),
+		.library(name: "SplashScreenKit", targets: ["SplashScreenKit"]),
+	],
+	dependencies: [
+		.package(url: "https://github.com/supabase/supabase-swift.git", from: "2.0.0"),
+	],
+	targets: [
+		.target(name: "AIKit", path: "Sources/MashiCoreKit/AIKit"),
+		.target(
+			name: "AuthKit",
+			dependencies: [.product(name: "Supabase", package: "supabase-swift")],
+			path: "Sources/MashiCoreKit/AuthKit"
+		),
+		.target(
+			name: "DatabaseKit",
+			dependencies: ["AuthKit", .product(name: "Supabase", package: "supabase-swift")],
+			path: "Sources/MashiCoreKit/DatabaseKit"
+		),
+		.target(name: "GamificationKit", path: "Sources/MashiCoreKit/GamificationKit"),
+		.target(name: "OnboardingKit", path: "Sources/MashiCoreKit/Onboarding"),
+		.target(name: "StorageKit", path: "Sources/MashiCoreKit/StorageKit"),
+		.target(name: "SubscriptionsKit", path: "Sources/MashiCoreKit/StoreKit"),
+		.target(name: "SplashScreenKit", path: "Sources/MashiCoreKit/SplashScreen"),
+		.target(
+			name: "MashiCoreKit",
+			dependencies: ["AIKit", "AuthKit", "DatabaseKit", "GamificationKit", "OnboardingKit", "StorageKit", "SubscriptionsKit", "SplashScreenKit"],
+			path: "Sources/MashiCoreKit/CoreKit"
+		),
+		.testTarget(name: "MashiCoreKitTests", dependencies: ["MashiCoreKit", "GamificationKit"]),
+	]
 )
